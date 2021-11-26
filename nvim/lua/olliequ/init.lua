@@ -1,0 +1,7 @@
+require('olliequ/telescope')
+require('olliequ/lightline')
+require('olliequ/gitsigns')
+require('olliequ/lsp')
+require('olliequ/treesitter')
+require('olliequ/nvim-tree')
+require('olliequ/nvim-autopairs')
