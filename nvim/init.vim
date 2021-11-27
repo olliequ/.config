@@ -57,7 +57,6 @@ let g:airline_powerline_fonts = 1
 set termguicolors
 
 " --- Plugins
-
 call plug#begin('~/.config/nvim/plugged')
 
 Plug 'sainnhe/gruvbox-material'
@@ -83,11 +82,12 @@ Plug 'onsails/lspkind-nvim'
 " Treesitter
 Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
 
+" Miscellaneous Plugins
 Plug 'jiangmiao/auto-pairs'
 Plug 'luochen1990/rainbow'
 Plug 'ryanoasis/vim-devicons'
 Plug 'kyazdani42/nvim-web-devicons' " for file icons
-Plug 'kyazdani42/nvim-tree.lua'
+Plug 'kyazdani42/nvim-tree.lua' " File tree
 Plug 'windwp/nvim-autopairs'
 Plug 'puremourning/vimspector'
 Plug 'lervag/vimtex'
@@ -97,18 +97,17 @@ lua require('olliequ')
 
 " --- Colorscheme
 colorscheme gruvbox-material
-" Use this for dark color schemes
-set background=dark
+set background=dark "" Use this for dark color schemes
 
 " -- Vimtex
 filetype plugin indent on
 syntax enable
 let g:tex_flavor='latex'
 let g:vimtex_view_method='skim'
-let g:vimtex_quickfix_mode=0
-set conceallevel=1
-let g:tex_conceal='abdmg'
-
+" let g:vimtex_quickfix_mode=0
+"set conceallevel=1
+"let g:tex_conceal='abdmg'
+ 
 " --- AutoBrackets
 let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
 
@@ -117,13 +116,14 @@ autocmd FileType python map <buffer> <F9> :w<CR>:exec '!python3' shellescape(@%,
 autocmd FileType python imap <buffer> <F9> <esc>:w<CR>:exec '!python3' shellescape(@%, 1)<CR>
 autocmd BufWinEnter *.py nmap <silent> <F5>:w<CR>:terminal python3 -m pdb '%:p'<CR>
 
-map <C-k> <C-W>k
+" Pressing ctrl+k is now a shortcut for ctrl+w+k (switching to the split above)
+let mapleader = ' '
+map <C-k> <C-W>k 
+map <C-j> <C-W>j 
 map <C-h> <C-W>h
 map <C-l> <C-w>l
-
-let mapleader = ' '
-
-" nnoremap <leader>h :wincmd h<Cr>
+nnoremap <leader>fr "*yy
+nnoremap <leader>h :wincmd h<Cr>
 " nnoremap <leader>j :wincmd j<Cr>
 " nnoremap <leader>k :wincmd k<Cr>
 " nnoremap <leader>l :wincmd l<Cr>
