@@ -104,9 +104,9 @@ filetype plugin indent on
 syntax enable
 let g:tex_flavor='latex'
 let g:vimtex_view_method='skim'
-" let g:vimtex_quickfix_mode=0
-"set conceallevel=1
-"let g:tex_conceal='abdmg'
+let g:vimtex_quickfix_mode=0
+set conceallevel=1
+let g:tex_conceal='abdmg'
  
 " --- AutoBrackets
 let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
@@ -123,10 +123,6 @@ map <C-j> <C-W>j
 map <C-h> <C-W>h
 map <C-l> <C-w>l
 nnoremap <leader>fr "*yy
-nnoremap <leader>h :wincmd h<Cr>
-" nnoremap <leader>j :wincmd j<Cr>
-" nnoremap <leader>k :wincmd k<Cr>
-" nnoremap <leader>l :wincmd l<Cr>
 
 nnoremap <leader>ff :Telescope find_files<Cr>
 nnoremap <C-n> :NvimTreeToggle<CR>
