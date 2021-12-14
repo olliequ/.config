@@ -128,6 +128,8 @@ nnoremap <leader>ff :Telescope find_files<Cr>
 nnoremap <C-n> :NvimTreeToggle<CR>
 nnoremap <leader>r :NvimTreeRefresh<CR>
 nnoremap <leader>n :NvimTreeFindFile<CR>
+vnoremap <silent> # :s/^/#/<cr>:noh<cr>
+vnoremap <silent> -# :s/^#//<cr>:noh<cr>
 
 " Toggle terminal on/off (neovim)
 nnoremap <S-t> :call TermToggle(12)<CR>
