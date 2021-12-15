@@ -31,7 +31,7 @@ require'nvim-tree'.setup {
   },
   filters = {
     dotfiles = false,
-    custom = {}
+    custom = {'*.pyc'}
   },
   view = {
     width = 30,

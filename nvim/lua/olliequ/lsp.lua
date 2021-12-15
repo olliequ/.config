@@ -1,6 +1,6 @@
 -- lspconfig
 local nvim_lsp = require('lspconfig')
-local servers = { 'pylsp' }
+local servers = {}
 
 local on_attach = function(client, bufnr)
     local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
@@ -28,13 +28,27 @@ end
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
 
-local servers = { 'pylsp' }
+local servers = {}
 for _, lsp in ipairs(servers) do
     nvim_lsp[lsp].setup {
         capabilities = capabilities,
         on_attach = on_attach,
     }
 end
+
+nvim_lsp['pylsp'].setup {
+   capabilities = capabilities,
+   on_attach = on_attach,
+   settings = {
+       pylsp = {
+           plugins = {
+                 pycodestyle = {
+                     ignore = {'E305', 'E226', 'E302'}
+                 }      
+            }           
+        }
+    }
+}
 
 -- If you want insert `(` after select function or method item
 local cmp_autopairs = require('nvim-autopairs.completion.cmp')
