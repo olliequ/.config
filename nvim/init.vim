@@ -123,8 +123,10 @@ map <C-k> <C-W>k
 map <C-j> <C-W>j 
 map <C-h> <C-W>h
 map <C-l> <C-w>l
+
+" Test
 nnoremap <leader>fr "*yy
-nnoremap <silent><leader>gc :Git add .<CR>:Git commit -m 'commit'<CR>
+nnoremap <leader>gc :Git commit -am 'commit'<CR>
 nnoremap <leader>gp :Git push<CR>
 
 nnoremap <leader>ff :Telescope find_files<Cr>
