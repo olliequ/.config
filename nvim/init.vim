@@ -124,7 +124,6 @@ map <C-j> <C-W>j
 map <C-h> <C-W>h
 map <C-l> <C-w>l
 
-" Test
 nnoremap <leader>fr "*yy
 nnoremap <leader>gc :Git commit -am 'commit'<CR>
 nnoremap <leader>gp :Git push<CR>
