@@ -125,6 +125,7 @@ map <C-h> <C-W>h
 map <C-l> <C-w>l
 
 nnoremap <leader>fr "*yy
+nnoremap <leader>ga :Git add -A<CR>
 nnoremap <leader>gc :Git commit -am 'commit'<CR>
 nnoremap <leader>gp :Git push<CR>
 
