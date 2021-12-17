@@ -43,7 +43,7 @@ nvim_lsp['pylsp'].setup {
        pylsp = {
            plugins = {
                  pycodestyle = {
-                     ignore = {'E305', 'E226', 'E302'}
+                     ignore = {'E305', 'E226', 'E302', 'E501', 'E271', 'E303', 'E261', 'E262', 'E202', 'E231', 'E401', 'E201', 'E225', 'E701', 'W293', 'W291'}
                  }      
             }           
         }

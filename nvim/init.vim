@@ -114,6 +114,7 @@ let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowTo
 " --- Mappings
 autocmd FileType python map <buffer> <F9> :w<CR>:exec '!python3' shellescape(@%, 1)<CR>
 autocmd FileType python imap <buffer> <F9> <esc>:w<CR>:exec '!python3' shellescape(@%, 1)<CR>
+autocmd FileType python map <buffer> <F7> :w<CR>:lcd %:p:h<CR>:exec '!python3' shellescape(@%, 1)<CR>
 autocmd BufWinEnter *.py nmap <silent> <F5>:w<CR>:terminal python3 -m pdb '%:p'<CR>
 
 " Pressing ctrl+k is now a shortcut for ctrl+w+k (switching to the split above)
@@ -123,6 +124,8 @@ map <C-j> <C-W>j
 map <C-h> <C-W>h
 map <C-l> <C-w>l
 nnoremap <leader>fr "*yy
+nnoremap <silent><leader>gc :Git add .<CR>:Git commit -m 'commit'<CR>
+nnoremap <leader>gp :Git push<CR>
 
 nnoremap <leader>ff :Telescope find_files<Cr>
 nnoremap <C-n> :NvimTreeToggle<CR>
