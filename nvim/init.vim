@@ -124,12 +124,13 @@ map <C-j> <C-W>j
 map <C-h> <C-W>h
 map <C-l> <C-w>l
 
+nnoremap <leader>- :resize +5<CR>
 nnoremap <leader>fr "*yy
 nnoremap <leader>ga :Git add -A<CR>
 nnoremap <leader>gc :Git commit -am 'commit'<CR>
 nnoremap <leader>gp :Git push<CR>
 
-nnoremap <leader>ff :Telescope find_files<Cr>
+nnoremap <leader>ww :Telescope find_files<Cr>
 nnoremap <C-n> :NvimTreeToggle<CR>
 nnoremap <leader>r :NvimTreeRefresh<CR>
 nnoremap <leader>n :NvimTreeFindFile<CR>
@@ -137,7 +138,7 @@ vnoremap <silent> # :s/^/#/<cr>:noh<cr>
 vnoremap <silent> -# :s/^#//<cr>:noh<cr>
 
 " Toggle terminal on/off (neovim)
-nnoremap <S-t> :call TermToggle(12)<CR>
+nnoremap <S-t> :call TermToggle(25)<CR>
 inoremap <A-t> <Esc>:call TermToggle(12)<CR>
 tnoremap <A-t> <C-\><C-n>:call TermToggle(12)<CR>
 
