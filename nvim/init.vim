@@ -157,6 +157,12 @@ nmap <Leader>dh <Plug>VimspectorStepOut
 nmap <Leader>dl <Plug>VimspectorStepInto
 nmap <Leader>dj <Plug>VimspectorStepOver" --- nvim-tree settings
 
+let g:vimspector_sidebar_width = 100
+let g:vimspector_code_minwidth = 30
+let g:vimspector_code_maxwidth = 40
+let g:vimspector_terminal_minwidth = 40
+let g:vimspector_terminal_maxwidth = 90
+
 " --- nvim-tree settings
 let g:nvim_tree_gitignore = 1 "0 by default
 let g:nvim_tree_quit_on_open = 0 "0 by default, closes the tree when you open a file
