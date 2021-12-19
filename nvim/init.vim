@@ -138,7 +138,7 @@ vnoremap <silent> # :s/^/#/<cr>:noh<cr>
 vnoremap <silent> -# :s/^#//<cr>:noh<cr>
 
 " Toggle terminal on/off (neovim)
-nnoremap <S-t> :call TermToggle(25)<CR>
+nnoremap <S-t> :call TermToggle(18)<CR>
 inoremap <A-t> <Esc>:call TermToggle(12)<CR>
 tnoremap <A-t> <C-\><C-n>:call TermToggle(12)<CR>
 

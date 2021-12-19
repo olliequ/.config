@@ -2,7 +2,7 @@
 
 my_list = [1, 5, 4, 6, 8, 11, 3, 12]
 
-new_list = list(filter(lambda x: (x%2 == 0) , my_list))
+new_list = list(filter(lambda x: (x % 2 == 0), my_list))
 
 print(new_list)
 
@@ -21,8 +21,8 @@ that require other functions for their arguments (like map & filter).
 
 my_list = [1, 5, 4, 6, 8, 11, 3, 12]
 
-new_list = list(map(lambda x: (x%2==0) , my_list))
-math_list = list(map(lambda x: (x*2) , my_list))
+new_list = list(map(lambda x: (x % 2 == 0), my_list))
+math_list = list(map(lambda x: (x*2), my_list))
 
 print(new_list)
 print(math_list)
