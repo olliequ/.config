@@ -91,6 +91,8 @@ Plug 'kyazdani42/nvim-tree.lua' " File tree
 Plug 'windwp/nvim-autopairs'
 Plug 'puremourning/vimspector'
 Plug 'lervag/vimtex'
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+
 call plug#end()
 
 lua require('olliequ')
