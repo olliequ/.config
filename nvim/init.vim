@@ -3,7 +3,6 @@
 " enables syntax highlighting
 syntax on
 
-
 " number of spaces in a <Tab>
 set tabstop=4
 set softtabstop=4
@@ -92,6 +91,8 @@ Plug 'windwp/nvim-autopairs'
 Plug 'puremourning/vimspector'
 Plug 'lervag/vimtex'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+Plug 'neovimhaskell/haskell-vim'
+Plug 'machakann/vim-sandwich'
 
 call plug#end()
 
@@ -162,7 +163,7 @@ nmap <Leader>dj <Plug>VimspectorStepOver" --- nvim-tree settings
 
 let g:vimspector_sidebar_width = 100
 let g:vimspector_code_minwidth = 30
-let g:vimspector_code_maxwidth = 40
+let g:vimspector_code_maxwidth = 100
 let g:vimspector_terminal_minwidth = 40
 let g:vimspector_terminal_maxwidth = 90
 
@@ -273,4 +274,3 @@ function! TermToggle(height)
         let g:term_win = win_getid()
     endif
 endfunction
-

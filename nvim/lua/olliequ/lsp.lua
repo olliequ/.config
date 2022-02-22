@@ -28,7 +28,7 @@ end
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
 
-local servers = {}
+local servers = {'clangd'}
 for _, lsp in ipairs(servers) do
     nvim_lsp[lsp].setup {
         capabilities = capabilities,
@@ -48,6 +48,16 @@ nvim_lsp['pylsp'].setup {
             }           
         }
     }
+}
+
+nvim_lsp['hls'].setup{
+      on_attach = on_attach,
+      settings = {
+          haskell = {
+              hlintOn = true,
+              formattingProvider = "fourmolu"
+          }
+       }
 }
 
 -- If you want insert `(` after select function or method item
